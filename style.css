@@ -25,11 +25,11 @@ body {
   .nav-link {
     /* color: #1a1a2e !important; */
     color: #f9a8d4;
-    font-weight: 500;
+    
   }
   .nav-item1 {
     color: #f9a8d4 !important;
-    font-weight: 500;
+
   }
 
   .nav-link:hover {
@@ -120,6 +120,11 @@ body {
    @media screen and (max-width: 768px) {
     .experiences {
       height: auto;
+      
+    }
+    img{
+        width: 250px;
+        height: 250px;
     }
     
    }
