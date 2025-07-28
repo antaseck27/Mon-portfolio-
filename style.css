@@ -27,6 +27,10 @@ body {
     color: #f9a8d4;
     font-weight: 500;
   }
+  .nav-item1 {
+    color: #f9a8d4 !important;
+    font-weight: 500;
+  }
 
   .nav-link:hover {
     color: #eeecec !important;
