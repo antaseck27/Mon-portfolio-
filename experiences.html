@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Expériences - Anta Seck</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #fce4ec;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #ac3e8c;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      border: 2px solid #f9a8d4;
+      border-radius: 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 25px rgba(249, 168, 212, 0.4);
+      cursor: pointer;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+      box-shadow: 0 5px 10px rgba(249, 168, 212, 0.3);
+    }
+
+    footer {
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation -->
- 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#" style="color: #f9a8d4;">Anta Seck</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="menu" style="color: #f9a8d4 !important;">
+      <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item1"><a class="nav-link" href="about.html">À propos</a></li>
           <li class="nav-item1"><a class="nav-link" href="experiences.html">Expériences</a></li>
@@ -27,98 +84,101 @@
     </div>
   </nav>
 
-   <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">Anta Seck</a>
-      <div class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link text-muted" href="index.html">À propos</a></li>
-          <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="experiences.html">Expériences</a></li>
-          <li class="nav-item"><a class="nav-link text-muted" href="contact.html">Contact</a></li>
-        </ul>
+  <!-- Main -->
+  <main>
+    <section class="py-5 experiences">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3 text-decoration-underline fade-in">Expériences professionnelles</h2>
+        <p class="text-muted mb-5 fade-in">Découvrez mon parcours en entreprise</p>
+
+        <div class="row g-4">
+          <!-- Chaque card sera révélée une à une -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Assistante administrative</h5>
+                <p class="card-subtitle text-muted">Municipalité de Scat Urbam</p>
+                <p class="card-text"><small>Avril – Juin 2023</small></p>
+                <ul>
+                  <li>Rédaction de rapports</li>
+                  <li>Accueil et réception du public</li>
+                  <li>Saisie administrative & appels</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Stage préscolaire</h5>
+                <p class="card-subtitle text-muted">Centre Talibou Dabo</p>
+                <p class="card-text"><small>Nov. 2022 – Janv. 2023</small></p>
+                <ul>
+                  <li>Accompagnement d’enfants handicapés</li>
+                  <li>Aide aux devoirs</li>
+                  <li>Activités ludiques</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Relation client</h5>
+                <p class="card-subtitle text-muted">SEMACENTER Dakar</p>
+                <p class="card-text"><small>Juin – Déc. 2019</small></p>
+                <ul>
+                  <li>Télévente & fidélisation</li>
+                  <li>Prospection & relance</li>
+                  <li>Traitement des réclamations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Enseignante préscolaire</h5>
+                <p class="card-subtitle text-muted">École Les Petites Perles</p>
+                <p class="card-text"><small>Oct. 2023 – Aujourd’hui</small></p>
+                <ul>
+                  <li>Animation d’activités éducatives</li>
+                  <li>Accompagnement des enfants</li>
+                  <li>Communication avec les parents</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </nav>  -->
+    </section>
+  </main>
 
-  <section class="py-5 experiences" style="background-color: #ffe4ee;"  >
-    <div class="container text-center">
-      <h2 class="fw-bold mb-3 text-decoration-underline">Expériences professionnelles</h2>
-      <p class="text-muted mb-5">Découvrez mon parcours en entreprise</p>
-
-      <div class="row g-4">
-        <!-- Assistante administrative -->
-        <div class=" cardi col-md-6 col-lg-3">
-          <div class="card h-100 shadow-lg">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Assistante administrative</h5>
-              <p class="card-subtitle text-muted">Municipalité de Scat Urbam</p>
-              <p class="card-text"><small>Avril – Juin 2023</small></p>
-              <ul>
-                <li>Rédaction de rapports</li>
-                <li>Accueil et réception du public</li>
-                <li>Saisie administrative & appels</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Stage préscolaire -->
-        <div class=" cardi col-md-6 col-lg-3">
-          <div class="card h-100 shadow-lg">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Stage préscolaire</h5>
-              <p class="card-subtitle text-muted">Centre Talibou Dabo</p>
-              <p class="card-text"><small>Nov. 2022 – Janv. 2023</small></p>
-              <ul>
-                <li>Accompagnement d’enfants handicapés</li>
-                <li>Aide aux devoirs</li>
-                <li>Activités ludiques</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Relation client -->
-        <div class=" cardi col-md-6 col-lg-3">
-          <div class="card h-100 shadow-lg p-4">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Relation client</h5>
-              <p class="card-subtitle text-muted">SEMACENTER Dakar</p>
-              <p class="card-text"><small>Juin – Déc. 2019</small></p>
-              <ul>
-                <li>Télévente & fidélisation</li>
-                <li>Prospection & relance</li>
-                <li>Traitement des réclamations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Enseignante maternelle -->
-        <div class=" cardi col-md-6 col-lg-3">
-          <div class="card h-100 shadow-lg">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Enseignante préscolaire</h5>
-              <p class="card-subtitle text-muted">École Les Petites Perles</p>
-              <p class="card-text"><small>Oct. 2023 – Aujourd’hui</small></p>
-              <ul>
-                <li>Animation d’activités éducatives</li>
-                <li>Accompagnement des enfants</li>
-                <li>Communication avec les parents</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <footer class="text-center py-4 bg-white border-top" style="background-color:#ffe4ee !important;">
+  <!-- Footer -->
+  <footer class="text-center">
     <small>© 2025 Anta Seck</small>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Animation des éléments texte (h2, p...)
+    const fadeIns = document.querySelectorAll('.fade-in');
+    fadeIns.forEach((el, index) => {
+      setTimeout(() => el.classList.add('visible'), index * 200);
+    });
 
+    // Animation des cards une par une
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('show');
+      }, 300 * index);
+    });
+  </script>
 </body>
 </html>

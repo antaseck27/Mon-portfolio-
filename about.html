@@ -8,6 +8,99 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+
+
+  <style>
+
+
+/* Animations à l'entrée pour la section Compétences */
+/* Les colonnes (col-md-4) à l'intérieur de cette section */
+.container.py-5 .col-md-4 {
+    opacity: 0; /* Commence invisible */
+    transform: translateY(20px); /* Commence légèrement décalé vers le bas */
+    animation: fadeInSlideUp 0.8s ease-out forwards; /* Applique l'animation */
+}
+
+/* Délai séquentiel pour chaque colonne des compétences */
+.container.py-5 .col-md-4:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.container.py-5 .col-md-4:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.container.py-5 .col-md-4:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Effets de survol (hover) pour les blocs de compétences */
+.container.py-5 .p-4 {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ajoute une transition fluide */
+}
+
+.container.py-5 .p-4:hover {
+    transform: translateY(-5px) scale(1.02); /* Remonte légèrement et zoome un peu */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ajoute une ombre plus prononcée */
+}
+
+
+
+
+
+    /* Animations à l'entrée */
+.container .col-md-4 {
+    opacity: 0; /* Commence invisible */
+    transform: translateY(20px); /* Commence légèrement décalé vers le bas */
+    animation: fadeInSlideUp 0.8s ease-out forwards; /* Applique l'animation */
+}
+
+/* Délai pour chaque colonne pour un effet séquentiel */
+.container .col-md-4:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.container .col-md-4:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.container .col-md-4:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Définition de l'animation d'entrée */
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateY(0); /* Remonte à sa position d'origine */
+    }
+}
+
+/* Effets de survol (hover) */
+.p-4 {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ajoute une transition fluide */
+}
+
+.p-4:hover {
+    transform: translateY(-5px) scale(1.02); /* Remonte légèrement et zoome un peu */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ajoute une ombre plus prononcée */
+}
+
+/* Style pour les puces de liste lors du survol du bloc */
+.p-4:hover ul li {
+    color: #007bff; /* Change la couleur du texte des puces, par exemple */
+}
+
+/* Optionnel: Animation des étoiles au survol pour les langues */
+.p-4 ul li:has(span.star) { /* Sélectionnez les éléments li qui contiennent une étoile */
+    transition: transform 0.2s ease-in-out;
+}
+
+.p-4 ul li:has(span.star):hover {
+    transform: translateX(5px); /* Déplace légèrement la puce vers la droite */
+}
+  </style>
 </head>
 <body>
 
